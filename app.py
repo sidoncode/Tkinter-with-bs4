@@ -1,18 +1,23 @@
 import csv
-with open("NIFTY50all28-08-2018-TO-27-08-2019.csv","rb") as NIFTY50:
-    NIFTY50reader = csv.reader(NIFTY50)
-    x = csv.reader(NIFTY50,delimiter=',',quotechar='|') #transformed from stackoverflow
-    NIFTY50list = []
-for row in x:
-    print(x)
-    '''if len(row) != 0:
-        NIFTY50list = NIFTY50list + [row]
-NIFTY50.close()
-print(NIFTY50)
-with open("NIFTY50all28-08-2018-TO-27-08-2019.csv","r") as NIFTY50:
-    x = csv.reader(NIFTY50,delimiter=',',quotechar='|')
-    pe = (input("Enter the pe value for the csv file"))
-    NIFTY50reader = csv.reader(NIFTY50)
-for row in x: 
-    print(row)
+'''with open('NIFTY50all28-08-2018-TO-27-08-2019.csv') as File:
+    reader = csv.reader(File, delimiter=',', quotechar=',',quoting=csv.QUOTE_MINIMAL)
+    for row in reader:
+        print(row)'''
+
+'''def pe_ratio():
+    obj = float(input("enter the value of the pe pe_ratio"))
+    with open('NIFTY50all28-08-2018-TO-27-08-2019.csv','rb') as File:
+        reader = csv.reader(File, delimiter=',', quotechar=',',quoting=csv.QUOTE_MINIMAL)
+        for row in reader:
+            if obj == row[1]:
+                print(row)
 '''
+
+def algo():
+    obj = float(input("enter"))
+    ifile = open('NIFTY50all28-08-2018-TO-27-08-2019.csv','r')
+    read = csv.reader(ifile)
+    for row in read:
+        if obj ==row[1]:
+            print(row)
+algo()
