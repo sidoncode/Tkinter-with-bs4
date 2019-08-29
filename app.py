@@ -12,7 +12,7 @@ import csv
             if obj == row[1]:
                 print(row)
 '''
-
+'''
 def algo():
     obj = float(input("enter"))
     ifile = open('NIFTY50all28-08-2018-TO-27-08-2019.csv','r')
@@ -21,3 +21,9 @@ def algo():
         if obj ==row[1]:
             print(row)
 algo()
+'''
+def check():
+    with open('NIFTY50all28-08-2018-TO-27-08-2019') as f:
+        if 'Date' in f.read():
+            print("true")
+check()
