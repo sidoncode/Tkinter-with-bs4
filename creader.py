@@ -1,4 +1,4 @@
-#!//usr//bin//python
+#!/usr/bin/python
 
 
 import csv
@@ -11,10 +11,6 @@ import sys
 import math                         
 import lambda
 import DictReader
-
-
-
-
 '''
 
 
@@ -24,7 +20,11 @@ import tkinter.messagebox
 
 
 def search_for_the_key():
-    
+    print("The search_for_the_key function has been executed")
+    if EntryField1.get() == "sid":
+        print("The if statement has been executed")
+    if var == "sid":
+        print("the 2nd if statement has been executed")
     #algo for the Scrap_data from the csv file 
 
 
@@ -32,23 +32,28 @@ def search_for_the_key():
 
 
 
-
 def main_window():
     window = tk.Tk()
-    window.title("The main title of the window")
+    window.title("CSV reader")
     window.geometry("400x350")
 
     title = tk.Label(text = "", )
     title.grid()
 
-    button1 = tk.Button(text="Search for the key",)#command ::lambda = search_for_the_key())
+    button1 = tk.Button(text="Search for the key",command = lambda : search_for_the_key())
     button1.grid(row= 0, column =1 )
 
 
-    EntryField = tk.Entry()
-    EntryField.grid(row= 0, column =0 )
+    EntryField1 = tk.Entry()
+    EntryField1.grid(row= 0, column =0 )
 
+    if EntryField1.get() == "sid":
+        print("the .get() function has been succesfully executed")
+  
+  
     window.mainloop() #for the tkinter algo execution 
+
+
 
 main_window();
 
