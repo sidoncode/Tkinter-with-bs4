@@ -1,3 +1,6 @@
+#!//usr//bin//python
+
+
 import csv
 import os
 import sys
@@ -5,16 +8,17 @@ import sys
 
 
 import tkinter as tk
-import math 
 import tkinter.dialog
 import tkinter.messagebox
 
 
-#def search_for_the_key():
+def search_for_the_key():
     
     #algo for the Scrap_data from the csv file 
 
-####
+
+#the entry field will be the key for the data parsing of the csv file 
+
 
 
 
