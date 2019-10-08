@@ -33,6 +33,10 @@ def search_for_the_key():
 
 
 def main_window():
+    def stmnt():
+        if EntryField1.get() == "sid":
+            print("The stmnt function has been executed")
+    
     window = tk.Tk()
     window.title("CSV reader")
     window.geometry("400x350")
@@ -40,7 +44,7 @@ def main_window():
     title = tk.Label(text = "", )
     title.grid()
 
-    button1 = tk.Button(text="Search for the key",command = lambda : search_for_the_key())
+    button1 = tk.Button(text="Search for the key",command = lambda : stmnt())
     button1.grid(row= 0, column =1 )
 
 
@@ -50,7 +54,8 @@ def main_window():
     if EntryField1.get() == "sid":
         print("the .get() function has been succesfully executed")
   
-  
+    
+
     window.mainloop() #for the tkinter algo execution 
 
 
